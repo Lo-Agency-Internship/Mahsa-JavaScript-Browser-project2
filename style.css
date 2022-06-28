@@ -1,0 +1,110 @@
+ body{
+    width:100 vm;
+    font-family:"Kaushan Script";
+    padding:0;
+    margin:0;
+    background-color: rgb(237, 225, 225);
+ }
+
+ 
+
+ .picture-container{
+    
+    margin:80px;
+} 
+
+.header{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family:"Kaushan Script" ;
+    font-size: 25px;
+}
+
+.upper-row {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    
+}
+.lower-row{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    margin-top: 20px;
+    
+
+}
+
+.buttons{
+
+    justify-content: space-around;
+    
+}
+
+.buttons-filter{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    
+    
+}
+.btn{
+   
+        font-family:"Kaushan Script";
+        margin-right: 2rem;
+
+}
+#myInput {
+    /* background-image: url('/css/searchicon.png'); */
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 60vw;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+  .magny{
+    border:1px solid pink;
+    padding:10px;
+    background-color: pink;
+    margin-top:-10px;
+    width: 21px;
+    height: 21px;
+    padding: 10px
+    
+
+  }
+.searchbar{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    margin-top:13px ;
+
+}
+/* .pic-1{
+    gap:10px;
+} */
+
+.test{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    font-family:"Kaushan Script" ;
+    background-color: aliceblue;
+    margin-top: -5px;
+}
+
+.hidden{
+    display:none;
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+  }
