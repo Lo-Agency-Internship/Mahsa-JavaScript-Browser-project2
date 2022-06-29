@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0bc6336a91.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-<script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -19,76 +21,141 @@
             <h3 style="color:red">Store</h3>
 
         </div>
-    </div>s
-    <div class="buttons-filter">
-    <div class="buttons">
-
-        <button class="btn" data-filter="all" onclick=filterPictures(event)>ALL</button>
-        <button class="btn" data-filter="cakes" onclick=filterPictures(event)>CAKES</button>
-        <button class="btn" data-filter="cupcakes" onclick=filterPictures(event)>CUPCAKES</button>
-        <button class="btn" data-filter="sweets" onclick=filterPictures(event)>SWEETS</button>
-        <button class="btn" data-filter="doughnots" onclick=filterPictures(event)>DOUGHNUTS</button>
-
     </div>
+    <div class="buttons-filter">
+        <div class="buttons">
+
+            <button class="btn" data-filter="all" onclick=filterPictures(event)>ALL</button>
+            <button class="btn" data-filter="cakes" onclick=filterPictures(event)>CAKES</button>
+            <button class="btn" data-filter="cupcakes" onclick=filterPictures(event)>CUPCAKES</button>
+            <button class="btn" data-filter="sweets" onclick=filterPictures(event)>SWEETS</button>
+            <button class="btn" data-filter="doughnots" onclick=filterPictures(event)>DOUGHNUTS</button>
+
+        </div>
     </div>
     <div class="searchbar">
         <div class="magny">
-        <i class="fa-solid fa-magnifying-glass" id="magny" onclick="filterPictureBySearch()"></i>
+            <i class="fa-solid fa-magnifying-glass" id="magny" onclick="filterPictureBySearch()"></i>
         </div>
-        <input type="text" id="myInput"  placeholder="Search for names.." title="Type in a name">
+        <input type="text" id="myInput" placeholder="Search for names.." title="Type in a name">
     </div>
-    
-    <div class="list">
-    <div class="picture-container">
-        <div class="upper-row">
-            <div class="img sweets">
-            <img src="img/cake.webp"  width="350" height="350" alt="cake" class="sweets">
-            <div class="test">
-                <p>sweet item</p>
-                <p>30$</p>
-            </div>
-        </div>
-            <div class="img cupcakes" >
-                <img src="img/cup.jpg" width="350" height="350" alt="" class="cupcakes">
-                <div class="test">
-                    <p>cupcake item</p>
-                    <p>30$</p>
-                </div>
-            </div>
-            <div class="img cakes">
-                <img src="img/cupcake.webp" width="350" height="350" alt="" class="cakes">
-                <div class="test">
-                    <p>Cake item</p>
-                    <p>30$</p>
-                </div>
-            </div>       
-        </div>
-        <div class="lower-row">
-            <div class="img doughnots ">
-                <img src="img/donat.jpg" width="350" height="350" alt="" class="doughnots">
-                <div class="test">
-                    <p>Doughnot item</p>
-                    <p>30$</p>
-                </div>
-                
-            </div>
-            <div class="img sweets">
-                <img src="img/macaron.jpg" width="350" height="350" alt="" class="sweets">
-                <div class="test">
-                    <p>Sweet item</p>
-                    <p>30$</p>
-                </div>
-            </div>
-            <div class="img cupcakes">
-                <img src="img/marshmelo.jpg" width="350" height="350" alt="" class="cupcakes">
-                <div class="test">
-                    <p>CupCake item</p>
-                    <p>30$</p>
-                </div>
-            </div>   
 
+    <div class="list">
+        <div class="picture-container">
+            <div class="upper-row">
+                <div class="img sweets">
+                    <img src="img/cake.webp" data-img="0" width="350" height="350" onclick="openModal(event)"
+                        class="sweets">
+                    <div class="test">
+                        <p>sweet item</p>
+                        <p>100$</p>
+                    </div>
+                </div>
+                <div class="img cupcakes">
+                    <img src="img/cup.jpg" data-img="1" width="350" height="350" onclick="openModal(event)"
+                        class="cupcakes">
+                    <div class="test">
+                        <p>cupcake item</p>
+                        <p>30$</p>
+                    </div>
+                </div>
+                <div class="img cakes">
+                    <img src="img/cupcake.webp" data-img="2" width="350" height="350" onclick="openModal(event)"
+                        class="cakes">
+                    <div class="test">
+                        <p>Cake item</p>
+                        <p>30$</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-row">
+                <div class="img doughnots ">
+                    <img src="img/donat.jpg" data-img="3" width="350" height="350" onclick="openModal(event)"
+                        class="doughnots">
+                    <div class="test">
+                        <p>Doughnot item</p>
+                        <p>30$</p>
+                    </div>
+
+                </div>
+                <div class="img sweets">
+                    <img src="img/macaron.jpg" data-img="4" width="350" height="350" onclick="openModal(event)"
+                        class="sweets">
+                    <div class="test">
+                        <p>Sweet item</p>
+                        <p>30$</p>
+                    </div>
+                </div>
+                <div class="img cupcakes">
+                    <img src="img/marshmelo.jpg" data-img="5" width="350" height="350" onclick="openModal(event)"
+                        class="cupcakes">
+                    <div class="test">
+                        <p>CupCake item</p>
+                        <p>30$</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
-</div>
+
+    <!-- modal -->
+    <div class="modal-content" id="modal0">
+
+        <button class="close" onclick="closeModal(event)" data-img="0">&times;</button>
+        <i id="left-arrow" class='fas fa-caret-left' style='font-size:36px' data-img="0" onclick="leftArrow(event)"></i>
+        <img src="img/cake.webp" id="test" width="600" height="600" alt="" class="cupcakes">
+        <i id="right-arrow" class='fas fa-caret-right' style='font-size:36px' data-img="0"
+            onclick="rightArrow(event)"></i>
+
+    </div>
+    <div class="modal-content" id="modal1">
+
+        <span class="close" onclick="closeModal(event)" data-img="1">&times;</span>
+        <i id="left-arrow" class='fas fa-caret-left' style='font-size:36px' data-img="1" onclick="leftArrow(event)"></i>
+        <img src="img/cup.jpg" id="test" width="600" height="600" alt="" class="cupcakes">
+        <i id="right-arrow" class='fas fa-caret-right' style='font-size:36px' data-img="1"
+            onclick="rightArrow(event)"></i>
+
+    </div>
+    <div class="modal-content" id="modal2">
+
+        <span class="close" onclick="closeModal(event)" data-img="2">&times;</span>
+        <i id="left-arrow" class='fas fa-caret-left' style='font-size:36px' data-img="2" onclick="leftArrow(event)"></i>
+        <img src="img/cupcake.webp" id="test" width="600" height="600" alt="" class="cupcakes">
+        <i id="right-arrow" class='fas fa-caret-right' style='font-size:36px' data-img="2"
+            onclick="rightArrow(event)"></i>
+
+    </div>
+    <div class="modal-content" id="modal3">
+
+        <span class="close" onclick="closeModal(event)" data-img="3">&times;</span>
+        <i id="left-arrow" class='fas fa-caret-left' style='font-size:36px' data-img="3" onclick="leftArrow(event)"></i>
+        <img src="img/donat.jpg" id="test" width="600" height="600" alt="" class="cupcakes">
+        <i id="right-arrow" class='fas fa-caret-right' style='font-size:36px' data-img="3"
+            onclick="rightArrow(event)"></i>
+
+    </div>
+    <div class="modal-content" id="modal4">
+
+        <span class="close" onclick="closeModal(event)" data-img="4">&times;</span>
+        <i id="left-arrow" class='fas fa-caret-left' style='font-size:36px' data-img="4" onclick="leftArrow(event)"></i>
+        <img src="img/macaron.jpg" id="test" width="600" height="600" alt="" class="cupcakes">
+        <i id="right-arrow" class='fas fa-caret-right' style='font-size:36px' data-img="4"
+            onclick="rightArrow(event)"></i>
+
+    </div>
+    <div class="modal-content" id="modal5">
+
+        <span class="close" onclick="closeModal(event)" data-img="5">&times;</span>
+        <i id="left-arrow" class='fas fa-caret-left' style='font-size:36px' data-img="5" onclick="leftArrow(event)"></i>
+        <img src="img/marshmelo.jpg" id="test" width="600" height="600" alt="" class="cupcakes">
+        <i id="right-arrow" class='fas fa-caret-right' style='font-size:36px' data-img="5"
+            onclick="rightArrow(event)"></i>
+
+    </div>
+
+
 </body>
+
 </html>
